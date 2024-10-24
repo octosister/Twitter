@@ -9,7 +9,7 @@ class DashboardContoller extends Controller
     public function index(){
         $users=[
             [
-                "name"=>"meno 1",
+                "name"=>"kokot",
                 "age"=> 17,
             ],
             [
