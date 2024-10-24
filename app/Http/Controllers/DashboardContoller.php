@@ -13,11 +13,11 @@ class DashboardContoller extends Controller
                 "age"=> 17,
             ],
             [
-                "name"=>"meno 2",
+                "name"=>"pica",
                 "age"=> 20,
             ],
             [
-                "name"=>"meno 3",
+                "name"=>"jezis",
                 "age"=> 3,
             ],
         ];
