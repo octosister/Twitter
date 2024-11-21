@@ -22,12 +22,11 @@ class DashboardContoller extends Controller
                 "age"=> 3,
             ],
         ];
-        $posts = Post::all();
+        $posts = Post::orderBy('likes','desc')->get();
 
         return view('DashBoard',[
             "users"=>$users,
             "posts"=>$posts
-            
         ]);
     }
 }

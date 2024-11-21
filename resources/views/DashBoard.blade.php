@@ -43,18 +43,20 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         <h4> Share yours ideas </h4>
-        <div class="row">
-            <div class="mb-3">
-                <textarea class="form-control" id="idea" rows="3"></textarea>
+        <form action ="{{ route("post.store") }}" method="post">
+            @csrf
+            <div class="row">
+                <div class="mb-3">
+                    <textarea class="form-control" id="idea" rows="3" name="content" ></textarea>
+                </div>
+                <div class="">
+                    <button class="btn btn-dark"> Share </button>
+                </div>
+        </form>
             </div>
-            <div class="">
-                <button class="btn btn-dark"> Share </button>
-            </div>
-        </div>
         <hr>
         @foreach ($posts as $post)
-            
-        @include('inc.post-card')
+            @include('inc.post-card')
         @endforeach
     </div>
     <div class="col-3">
