@@ -45,26 +45,13 @@
             </div>
         @endif
         <h4> Share yours ideas </h4>
-        <form action ="{{ route("post.store") }}" method="post">
-            @csrf
-            <div class="row">
-                <div class="mb-3">
-                    <textarea class="form-control" id="idea" rows="3" name="content" ></textarea>
-                    @error('content')
-                        <span style="color: blueviolet">{{ $message }}</span>
-                    @enderror
-                </div>
-                <div class="">
-                    <button class="btn btn-dark"> Share </button>
-                </div>
-        </form>
             </div>
         <hr>
 
         
-        @foreach ($posts as $post)
-            @include('inc.post-card')
-        @endforeach
+        
+        @include('inc.post-card')
+        
 
 
     </div>

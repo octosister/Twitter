@@ -26,7 +26,8 @@ class DashboardContoller extends Controller
 
         return view('DashBoard',[
             "users"=>$users,
-            "posts"=>$posts
+            "posts"=>$posts,
+            
         ]);
     }
 }
