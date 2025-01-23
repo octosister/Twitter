@@ -16,7 +16,9 @@
                         @csrf
                         <button type="submit">X</button>
                     </form>
-                    <a href="{{ route ('post.show', $post->id)}}">VIEW</a>
+                    <a href="{{ route ('post.show', $post->id)}}">view</a>
+                    
+                    <a href="{{ route ('post.edit', $post->id)}}">update</a>
                 </div>
             </div>
         </div>

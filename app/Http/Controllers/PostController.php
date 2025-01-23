@@ -35,4 +35,21 @@ class PostController extends Controller
             'post' => $post
         ]);
     }
+    public function edit(Post $post){
+        return view("post.edit",[
+            'post' => $post
+        ]);
+    }
+    public function update(Request $request, Post $post) {
+        $validatedData = $request->validate([
+            'content' => 'required|min:3|max:240',
+        ]);
+    
+        $post->update([
+            'content' => $validatedData['content'],
+            'likes' => 0,
+        ]);
+
+        return redirect()->route("dashboard.index")->with('success', 'Idea updated successfully!');
+    }
 }
