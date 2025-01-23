@@ -31,7 +31,7 @@ class PostController extends Controller
         return redirect()->route("dashboard.index")->with("success","Post was successfuly deleted!");
     }
     public function show(Post $post){
-        return view("inc.post",[
+        return view("post.show",[
             'post' => $post
         ]);
     }
